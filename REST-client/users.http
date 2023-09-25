@@ -1,0 +1,21 @@
+@api-url = "paste api url here"
+
+
+### Create a new user!
+POST {{api-url}}
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "name": "test",
+    "password": "testpass"
+}
+
+### Login
+POST {{api-url}}/login
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "testpass"
+}
