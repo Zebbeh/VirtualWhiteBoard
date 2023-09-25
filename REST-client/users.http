@@ -1,4 +1,4 @@
-@api-url = "paste api url here"
+@api-url = http://localhost:3030/users
 
 
 ### Create a new user!
