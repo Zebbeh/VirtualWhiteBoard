@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-require('dotenv').config() // Läs in alla variabler i .env
+require('dotenv').config()
 
 module.exports = (req,res, next) => {
     console.log('auth middleware')

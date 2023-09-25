@@ -1,5 +1,5 @@
 @api-url = http://localhost:3030/users
-
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTExZmFlYzJjNzQ3OTFmOGYwY2EzMWYiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJuYW1lIjoidGVzdCIsImV4cGlyZXNJbiI6IjFkIiwiaWF0IjoxNjk1Njc3OTM1fQ.fxdNbr36Ow-H7xE-lSI3R-mdZ4hQa1yeOJmP-yzSg6c
 
 ### Create a new user!
 POST {{api-url}}
