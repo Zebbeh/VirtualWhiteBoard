@@ -28,10 +28,6 @@ app.use('/public', express.static(__dirname + '/public'))
 //const notesRouter = require('./routes/notes.js')
 //app.use('/notes', auth, notesRouter)
 
-
-
-console.log("Morjens Node!") 
-
 app.listen(PORT, () => {
     console.log(`Server listening on http://localhost:${PORT}`)
 })
