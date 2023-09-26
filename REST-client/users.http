@@ -1,5 +1,5 @@
 @api-url = http://localhost:3030/users
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTExZmFlYzJjNzQ3OTFmOGYwY2EzMWYiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJuYW1lIjoidGVzdCIsImV4cGlyZXNJbiI6IjFkIiwiaWF0IjoxNjk1Njc3OTM1fQ.fxdNbr36Ow-H7xE-lSI3R-mdZ4hQa1yeOJmP-yzSg6c
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTEzMzg2MTc2NTQ5MzgxMWMxNDVlOGQiLCJlbWFpbCI6InRlc3Q1QHRlc3QuY29tIiwibmFtZSI6InRlc3QiLCJleHBpcmVzSW4iOiIxZCIsImlhdCI6MTY5NTc1OTgwOH0.afnG7Bh8uiShpY_4Q4JcXliS2y4TwdTA_uFi_TJqYJQ
 
 ### Create a new user!
 POST {{api-url}}
@@ -17,12 +17,8 @@ POST {{api-url}}/login
 Content-Type: application/json
 
 {
-    "email": "test2@test.com",
+    "email": "test5@test.com",
     "password": "testpass"
 }
 
-
-### GET user boards
-GET {{api-url}}/boards
-Authorization: Bearer {{token}}
 

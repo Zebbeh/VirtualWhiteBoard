@@ -25,8 +25,8 @@ app.use('/public', express.static(__dirname + '/public'))
 // middleware-funktion, validerar jwt
 //app.use(auth)
 
-//const notesRouter = require('./routes/notes.js')
-//app.use('/notes', auth, notesRouter)
+const boardsRouter = require('./routes/boards.js')
+app.use('/boards', auth, boardsRouter)
 
 app.listen(PORT, () => {
     console.log(`Server listening on http://localhost:${PORT}`)

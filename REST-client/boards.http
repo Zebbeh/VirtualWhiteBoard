@@ -1,0 +1,12 @@
+@api-url = http://localhost:3030/boards
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTEzMzg2MTc2NTQ5MzgxMWMxNDVlOGQiLCJlbWFpbCI6InRlc3Q1QHRlc3QuY29tIiwibmFtZSI6InRlc3QiLCJleHBpcmVzSW4iOiIxZCIsImlhdCI6MTY5NTc1OTgwOH0.afnG7Bh8uiShpY_4Q4JcXliS2y4TwdTA_uFi_TJqYJQ
+
+
+
+
+
+
+### GET user boards
+GET {{api-url}}
+Authorization: Bearer {{token}}
+
