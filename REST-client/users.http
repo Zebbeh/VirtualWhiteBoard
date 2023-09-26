@@ -6,8 +6,9 @@ POST {{api-url}}
 Content-Type: application/json
 
 {
-    "email": "test2@test.com",
+    "email": "test5@test.com",
     "name": "test",
+    "board": ["board1", "board2"],
     "password": "testpass"
 }
 
@@ -19,3 +20,9 @@ Content-Type: application/json
     "email": "test2@test.com",
     "password": "testpass"
 }
+
+
+### GET user boards
+GET {{api-url}}/boards
+Authorization: Bearer {{token}}
+

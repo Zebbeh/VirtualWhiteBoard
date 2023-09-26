@@ -49,6 +49,7 @@ router.post('/', async (req, res) => {
         data: {
             email: req.body.email,
             name: req.body.name,
+            board: req.body.board,
             password: hash
         },
     })
