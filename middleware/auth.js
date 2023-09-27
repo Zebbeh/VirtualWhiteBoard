@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
 module.exports = (req,res, next) => {
-    console.log('auth middleware')
+    
 
     try {
         const token = req.headers['authorization'].split(' ')[1]

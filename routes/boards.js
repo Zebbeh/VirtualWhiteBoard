@@ -7,15 +7,14 @@ const prisma = new PrismaClient()
 // Get user boards
 router.get('/', async (req,res) => {
 
-    const board = await prisma.users.board.findUnique({
-        where: {userId: req.authUser.sub, },
+    const user = await prisma.users.findUnique({
+        where: { id: req.authUser.sub, },
     })
 
     console.log("boards GET")
-    console.log(res)
     res.send({
         msg: 'boards',
-        board: board,
+        board: user.board,
         authorizedUserId: req.authUser.sub
     })
 })

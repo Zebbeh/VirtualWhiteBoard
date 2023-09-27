@@ -6,9 +6,9 @@ POST {{api-url}}
 Content-Type: application/json
 
 {
-    "email": "test5@test.com",
+    "email": "test6@test.com",
     "name": "test",
-    "board": ["board1", "board2"],
+    "board": ["board1", "board2", "board3", "board4", "board5"],
     "password": "testpass"
 }
 
@@ -17,7 +17,7 @@ POST {{api-url}}/login
 Content-Type: application/json
 
 {
-    "email": "test5@test.com",
+    "email": "test6@test.com",
     "password": "testpass"
 }
 
