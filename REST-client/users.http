@@ -1,14 +1,13 @@
 @api-url = http://localhost:3030/users
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTEzMzg2MTc2NTQ5MzgxMWMxNDVlOGQiLCJlbWFpbCI6InRlc3Q1QHRlc3QuY29tIiwibmFtZSI6InRlc3QiLCJleHBpcmVzSW4iOiIxZCIsImlhdCI6MTY5NTc1OTgwOH0.afnG7Bh8uiShpY_4Q4JcXliS2y4TwdTA_uFi_TJqYJQ
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE0NTMxMTUyYzdlYTcyYWUwZjRlMjQiLCJlbWFpbCI6InRlc3Q2OUB0ZXN0LmNvbSIsIm5hbWUiOiJ0ZXN0IiwiZXhwaXJlc0luIjoiMWQiLCJpYXQiOjE2OTU4NDExNDZ9.FpMpVkWsXTDt1wJDPO6E-Zox41vQ81vBJzKbVYSwhB4
 
 ### Create a new user!
 POST {{api-url}}
 Content-Type: application/json
 
 {
-    "email": "test6@test.com",
+    "email": "test69@test.com",
     "name": "test",
-    "board": ["board1", "board2", "board3", "board4", "board5"],
     "password": "testpass"
 }
 
@@ -17,7 +16,7 @@ POST {{api-url}}/login
 Content-Type: application/json
 
 {
-    "email": "test6@test.com",
+    "email": "test69@test.com",
     "password": "testpass"
 }
 

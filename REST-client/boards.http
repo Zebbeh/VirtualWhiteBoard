@@ -1,5 +1,5 @@
 @api-url = http://localhost:3030/boards
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTEzMzg2MTc2NTQ5MzgxMWMxNDVlOGQiLCJlbWFpbCI6InRlc3Q1QHRlc3QuY29tIiwibmFtZSI6InRlc3QiLCJleHBpcmVzSW4iOiIxZCIsImlhdCI6MTY5NTc1OTgwOH0.afnG7Bh8uiShpY_4Q4JcXliS2y4TwdTA_uFi_TJqYJQ
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE0NTMxMTUyYzdlYTcyYWUwZjRlMjQiLCJlbWFpbCI6InRlc3Q2OUB0ZXN0LmNvbSIsIm5hbWUiOiJ0ZXN0IiwiZXhwaXJlc0luIjoiMWQiLCJpYXQiOjE2OTU4NDExNDZ9.FpMpVkWsXTDt1wJDPO6E-Zox41vQ81vBJzKbVYSwhB4
 
 
 
@@ -10,3 +10,12 @@
 GET {{api-url}}
 Authorization: Bearer {{token}}
 
+
+### Create a board
+POST {{api-url}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "name": "Testboard1"
+}

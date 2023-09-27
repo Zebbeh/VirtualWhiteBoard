@@ -10,7 +10,7 @@ require('dotenv').config()
 // Login route
 router.post('/login', async (req, res) => {
     try {
-        const user = await prisma.users.findUnique({
+        const user = await prisma.User.findUnique({
             where: {email: req.body.email}
         })
 
@@ -45,7 +45,7 @@ router.post('/', async (req, res) => {
 
     const hash = await bcrypt.hash(req.body.password, 12)
 
-    const user = await prisma.users.create({
+    const user = await prisma.User.create({
         data: {
             email: req.body.email,
             name: req.body.name,

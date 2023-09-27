@@ -23,7 +23,7 @@ app.use('/public', express.static(__dirname + '/public'))
 
 
 // middleware-funktion, validerar jwt
-//app.use(auth)
+app.use(auth)
 
 const boardsRouter = require('./routes/boards.js')
 app.use('/boards', auth, boardsRouter)
