@@ -5,18 +5,31 @@ const prisma = new PrismaClient()
 
 
 // Get user boards
-router.get('/', async (req,res) => {
+router.get('/:id', async (req,res) => {
 
-    const user = await prisma.User.findUnique({
-        where: { id: req.authUser.sub, },
-    })
-
-    console.log("boards GET")
-    res.send({
-        msg: 'boards',
-        board: user.board,
-        authorizedUserId: req.authUser.sub
-    })
+    try {
+        const user = await prisma.User.findUnique({
+            where: { id: req.params.id },
+        })
+        if (req.authUser.sub == user.id){
+            console.log("boards GET")
+            res.send({
+                msg: 'boards',
+                board: user.board,
+                authorizedUserId: req.authUser.sub
+            })
+        } else {
+            res.send({
+                msg: 'Error',
+                text: 'No permission'
+            })
+        }
+        
+    } catch (error) {
+        console.error("Error getting user boards:", error);
+        res.status(500).send({error: "Internal server"})
+    }
+    
 })
 
 router.post('/', async (req,res) => { 

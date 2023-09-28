@@ -1,9 +1,9 @@
 @api-url = http://localhost:3030/users
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE0NTMxMTUyYzdlYTcyYWUwZjRlMjQiLCJlbWFpbCI6InRlc3Q2OUB0ZXN0LmNvbSIsIm5hbWUiOiJ0ZXN0IiwiZXhwaXJlc0luIjoiMWQiLCJpYXQiOjE2OTU4NDExNDZ9.FpMpVkWsXTDt1wJDPO6E-Zox41vQ81vBJzKbVYSwhB4
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE1YzM4N2M5MzA0YWNkNWFiZTFlOTgiLCJlbWFpbCI6InRlc3QyM0B0ZXN0LmNvbSIsIm5hbWUiOiJ0ZXN0IiwiYm9hcmQiOlsidGVzdDEiLCJ0ZXN0MiJdLCJleHBpcmVzSW4iOiIxZCIsImlhdCI6MTY5NTkzMTc4Nn0.VwrefUP7s44fIWfaKHcXXWZaCtqzXIOjhwMYTbqj-lA
 
 
 ### add /userid för för att targeta rätt user
-GET {{api-url}}
+GET {{api-url}}/6515c387c9304acd5abe1e98
 Authorization: Bearer {{token}}
 
 
@@ -12,7 +12,7 @@ POST {{api-url}}
 Content-Type: application/json
 
 {
-    "email": "teest23@test.com",
+    "email": "test231111111111111@test.com",
     "name": "test",
     "password": "testpass",
     "board": ["test1","test2"]
@@ -23,7 +23,7 @@ POST {{api-url}}/login
 Content-Type: application/json
 
 {
-    "email": "teest23@test.com",
+    "email": "test231111111111111@test.com",
     "password": "testpass"
 }
 

@@ -1,5 +1,5 @@
 @api-url = http://localhost:3030/boards
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE1NjA4MjQ5Njk1ZTBmY2M4YjdiMzkiLCJlbWFpbCI6InRlc3QxMjMxMjM0QHRlc3QuY29tIiwibmFtZSI6InRlc3QiLCJib2FyZCI6WyJ0ZXN0MSIsInRlc3QyIl0sImV4cGlyZXNJbiI6IjFkIiwiaWF0IjoxNjk1ODk5Nzg0fQ.UYxXWUL87-U7qEXfH931i9AKoGlP6NDHsb1I3Ki97lw
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE1ZDc0MGI1NzhjZmY2NmZkMTRjZDAiLCJlbWFpbCI6InRlc3QyMzExMTExMTExMTExMTFAdGVzdC5jb20iLCJuYW1lIjoidGVzdCIsImJvYXJkIjpbInRlc3QxIiwidGVzdDIiXSwiZXhwaXJlc0luIjoiMWQiLCJpYXQiOjE2OTU5MzIwNDR9.H8JXTo3SpFuSQICTTZnsgKJxVH2Hk117-WSj6ODWgTY
 
 
 
@@ -7,7 +7,7 @@
 
 
 ### GET user boards
-GET {{api-url}}
+GET {{api-url}}/6515d740b578cff66fd14cd0
 Authorization: Bearer {{token}}
 
 
