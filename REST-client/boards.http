@@ -19,3 +19,14 @@ Content-Type: application/json
 {
     "name": "Testboard1"
 }
+
+
+### Patch board
+# Add id for specific board
+PATCH {{api-url}}/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    ""
+}
