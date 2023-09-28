@@ -6,7 +6,6 @@ const prisma = new PrismaClient()
 
 // Get user boards
 router.get('/:id', async (req,res) => {
-
     try {
         const user = await prisma.User.findUnique({
             where: { id: req.params.id },
@@ -24,14 +23,11 @@ router.get('/:id', async (req,res) => {
                 text: 'No permission'
             })
         }
-        
     } catch (error) {
         console.error("Error getting user boards:", error);
         res.status(500).send({error: "Internal server"})
     }
-    
 })
-
 router.post('/', async (req,res) => { 
     try{
         const board = await prisma.Board.create({
@@ -48,7 +44,6 @@ router.post('/', async (req,res) => {
             userId: board.userId,
             // Add any other relevant properties you want to include
         };
-
         res.json(responseData)
     } catch (error) {
         console.error("Error creating board:", error);
@@ -56,9 +51,10 @@ router.post('/', async (req,res) => {
     }finally {
         await prisma.$disconnect(); // Disconnect Prisma client
     }
-    
-
-
 });
+
+
+
+
 
 module.exports = router
