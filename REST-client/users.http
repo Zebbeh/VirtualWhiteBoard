@@ -1,12 +1,18 @@
 @api-url = http://localhost:3030/users
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE0NTMxMTUyYzdlYTcyYWUwZjRlMjQiLCJlbWFpbCI6InRlc3Q2OUB0ZXN0LmNvbSIsIm5hbWUiOiJ0ZXN0IiwiZXhwaXJlc0luIjoiMWQiLCJpYXQiOjE2OTU4NDExNDZ9.FpMpVkWsXTDt1wJDPO6E-Zox41vQ81vBJzKbVYSwhB4
 
+
+### add /userid för för att targeta rätt user
+GET {{api-url}}
+Authorization: Bearer {{token}}
+
+
 ### Create a new user!
 POST {{api-url}}
 Content-Type: application/json
 
 {
-    "email": "test1231234@test.com",
+    "email": "teest23@test.com",
     "name": "test",
     "password": "testpass",
     "board": ["test1","test2"]
@@ -17,8 +23,19 @@ POST {{api-url}}/login
 Content-Type: application/json
 
 {
-    "email": "test1231234@test.com",
+    "email": "teest23@test.com",
     "password": "testpass"
 }
 
+### add /userid för för att targeta rätt user
+PATCH {{api-url}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
 
+{
+    "password": "Password123"
+}
+
+### add /userid för för att targeta rätt user
+DELETE {{api-url}}
+Authorization: Bearer {{token}}
