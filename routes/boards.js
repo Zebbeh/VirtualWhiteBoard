@@ -7,7 +7,7 @@ const prisma = new PrismaClient()
 // Get user boards
 router.get('/', async (req,res) => {
 
-    const user = await prisma.users.findUnique({
+    const user = await prisma.User.findUnique({
         where: { id: req.authUser.sub, },
     })
 

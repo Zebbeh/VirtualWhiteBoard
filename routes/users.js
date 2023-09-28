@@ -28,13 +28,14 @@ router.post('/login', async (req, res) => {
             sub: user.id, 
             email: user.email, 
             name: user.name,
+            board: user.board,
             expiresIn: '1d'
         }, process.env.JWT_SECRET)
 
         res.send({token: token, msg: "Login successful", userId: user.id})
 
     } catch (error) {
-        
+        console.log(error)
     }
 
 })
