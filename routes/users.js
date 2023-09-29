@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const auth = require('../middleware/auth.js')
 const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 require('dotenv').config()
@@ -57,7 +58,34 @@ router.post('/', async (req, res) => {
     console.log("user created:", user)
     res.send({ msg: 'user created', id: user.id })
 })
+// Patch user
+router.patch('/:id', auth, async (req,res) => {
+    if(req.params.id != req.authUser.sub) {
+        res.status(403).send({
+            msg: 'ERROR',
+            error: 'Cannot pathc other users'
+        })
+    }
+    let hash = null
+    if(req.body.password){
+        hash = await bcrypt.hash(req.body.password, 12)
+    }
 
+    const user = await prisma.User.update({
+        where: {
+            id: req.params.id,
+        },
+        data: {
+            password: hash,
+            name: req.params.name
+        }
+    })
+    res.send({
+        msg: 'Patch',
+        id: req.params.id,
+        user: user
+    })
+})
 
 
 module.exports = router

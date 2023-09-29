@@ -1,0 +1,13 @@
+@api-url = http://localhost:3030/posts
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE2ZDllMDQ1YTI1YzcyZjFlYzM4MjQiLCJlbWFpbCI6InRlc3QyMzExMTExMTExMTExMTFAdGVzdC5jb20iLCJuYW1lIjoidGVzdCIsImJvYXJkIjpbInRlc3QxIiwidGVzdDIiXSwiZXhwaXJlc0luIjoiMWQiLCJpYXQiOjE2OTU5OTY1NTV9.FvrrHsTtUZRnaclmKOwNn7ijAK1iKRVtWAuP6PE8Vvg
+
+
+### post a new post
+POST {{api-url}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "title": "test post",
+    "content": "Testing testing testing"
+}
