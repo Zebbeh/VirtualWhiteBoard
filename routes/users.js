@@ -66,8 +66,9 @@ router.patch('/:id', auth, async (req,res) => {
             error: 'Cannot pathc other users'
         })
     }
-    let hash = null
-    if(req.body.password){
+    try {
+        let hash = null
+    if (req.body.password){
         hash = await bcrypt.hash(req.body.password, 12)
     }
 
@@ -85,6 +86,10 @@ router.patch('/:id', auth, async (req,res) => {
         id: req.params.id,
         user: user
     })
+    } catch (error) {
+        console.error(error)
+    }
+    
 })
 
 

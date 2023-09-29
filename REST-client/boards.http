@@ -1,8 +1,9 @@
 @api-url = http://localhost:3030/boards
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE1ZDc0MGI1NzhjZmY2NmZkMTRjZDAiLCJlbWFpbCI6InRlc3QyMzExMTExMTExMTExMTFAdGVzdC5jb20iLCJuYW1lIjoidGVzdCIsImJvYXJkIjpbInRlc3QxIiwidGVzdDIiXSwiZXhwaXJlc0luIjoiMWQiLCJpYXQiOjE2OTU5MzIwNDR9.H8JXTo3SpFuSQICTTZnsgKJxVH2Hk117-WSj6ODWgTY
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE2ZDllMDQ1YTI1YzcyZjFlYzM4MjQiLCJlbWFpbCI6InRlc3QyMzExMTExMTExMTExMTFAdGVzdC5jb20iLCJuYW1lIjoidGVzdCIsImJvYXJkIjpbInRlc3QxIiwidGVzdDIiXSwiZXhwaXJlc0luIjoiMWQiLCJpYXQiOjE2OTYwMDI1NTZ9.orPmvVZyN9C1dVpOzQBZYClVWsVCR5ER0BBnBLN1rgs
 
 
-
+### Test1 6516f65f682e492391e504f8
+### Test2 6516f676682e492391e504fa
 
 
 
@@ -17,7 +18,7 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "name": "Testboard1"
+    "name": "Test2"
 }
 
 

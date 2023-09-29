@@ -12,10 +12,10 @@ POST {{api-url}}
 Content-Type: application/json
 
 {
-    "email": "test112331111@test.com",
+    "email": "Boardtester@test.com",
     "name": "test",
     "password": "testpass",
-    "board": ["test1","test2"]
+    "board": ["6516f676682e492391e504fa", "6516f676682e492391e504fa"]
 }
 
 ### Login
