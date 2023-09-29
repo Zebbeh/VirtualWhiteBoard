@@ -1,5 +1,5 @@
 @api-url = http://localhost:3030/posts
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE2ZDllMDQ1YTI1YzcyZjFlYzM4MjQiLCJlbWFpbCI6InRlc3QyMzExMTExMTExMTExMTFAdGVzdC5jb20iLCJuYW1lIjoidGVzdCIsImJvYXJkIjpbInRlc3QxIiwidGVzdDIiXSwiZXhwaXJlc0luIjoiMWQiLCJpYXQiOjE2OTU5OTY1NTV9.FvrrHsTtUZRnaclmKOwNn7ijAK1iKRVtWAuP6PE8Vvg
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTE3NDRjNTU5MzExMjk4NmNmNzczOWYiLCJlbWFpbCI6InBvc3RUZXN0ZXJAdGVzdC5jb20iLCJuYW1lIjoidGVzdCIsImJvYXJkIjpbIjY1MTZmNjc2NjgyZTQ5MjM5MWU1MDRmYSIsIjY1MTZmNjc2NjgyZTQ5MjM5MWU1MDRmYSJdLCJleHBpcmVzSW4iOiIxZCIsImlhdCI6MTY5NjAyMzc3N30.beMT0Gtjhf9hUqGmwd3UJKjjJUi9fxLjMk9tGw6gNXs
 
 
 ### post a new post
@@ -8,6 +8,10 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "title": "test post",
+    "title": "test post ding dong",
     "content": "Testing testing testing"
 }
+
+### Delete a post
+DELETE {{api-url}}/6517459d917578678c13b44f
+Authorization: Bearer {{token}}

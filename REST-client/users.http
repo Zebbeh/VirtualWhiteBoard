@@ -12,7 +12,7 @@ POST {{api-url}}
 Content-Type: application/json
 
 {
-    "email": "Boardtester@test.com",
+    "email": "postTester@test.com",
     "name": "test",
     "password": "testpass",
     "board": ["6516f676682e492391e504fa", "6516f676682e492391e504fa"]
@@ -23,8 +23,8 @@ POST {{api-url}}/login
 Content-Type: application/json
 
 {
-    "email": "test231111111111111@test.com",
-    "password": "password123"
+    "email": "postTester@test.com",
+    "password": "testpass"
 }
 
 ### add /userid för för att targeta rätt user

@@ -24,3 +24,24 @@ router.post('/', async (req, res) => {
     
     
 })
+// Delete a post by id
+router.delete('/:id', async (req,res) => {
+    try {
+        const post = await prisma.Post.delete({
+            where: {id: req.params.id}
+        })
+        res.send({
+            msg: 'post deleted',
+            post: post
+        })
+    } catch (error) {
+        console.log(error)
+        res.send({
+            msg: 'ERROR',
+            error: error
+        })
+        
+    }
+})
+
+module.exports = router

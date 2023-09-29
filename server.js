@@ -19,7 +19,8 @@ app.use('/users', usersRouter)
 
 app.use('/public', express.static(__dirname + '/public'))
 
-
+const postsRouter = require('./routes/posts.js')
+app.use('/posts', auth, postsRouter)
 
 
 // middleware-funktion, validerar jwt
