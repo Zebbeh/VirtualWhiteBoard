@@ -17,9 +17,9 @@ model Board {
 
 model Post {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  content   String
+  content   String   @default("Enter text here")
   createdAt DateTime @default(now())
-  title     String
+  title     String   @default("Undefined")
   color     String   @default("Red")
   userId    String   @db.ObjectId
 }

@@ -12,6 +12,18 @@ Content-Type: application/json
     "content": "Testing testing testing"
 }
 
+### Patch a post. You can leave empty fields, they will not be updated (stays with the same value as in database)
+PATCH {{api-url}}/6517ddc13d35b8e9ea4eff07
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "title": "update test test test test"
+}
+
+
+
 ### Delete a post
 DELETE {{api-url}}/6517459d917578678c13b44f
 Authorization: Bearer {{token}}
+

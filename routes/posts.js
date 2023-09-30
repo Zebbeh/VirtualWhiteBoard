@@ -13,7 +13,8 @@ router.post('/', async (req, res) => {
                 data: {
                    title: req.body.title,
                    content: req.body.content,
-                   userId: req.authUser.sub
+                   userId: req.authUser.sub,
+                   color: req.body.color
                 },
             })
             console.log("post created:", post)
@@ -41,6 +42,28 @@ router.delete('/:id', async (req,res) => {
             error: error
         })
         
+    }
+})
+// update a post
+router.patch('/:id', async (req,res) => {
+    try {
+        const post = await prisma.Post.update({
+            where: {
+                id: req.params.id,
+            },
+            data: {
+                content: req.body.content,
+                title: req.body.title,
+                color: req.body.color
+            },
+        })
+        res.send({
+            msg: 'Post patched',
+            id: req.params.id,
+            post: post
+        })
+    } catch (error) {
+        console.error(error)
     }
 })
 

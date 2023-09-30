@@ -63,7 +63,7 @@ router.patch('/:id', auth, async (req,res) => {
     if(req.params.id != req.authUser.sub) {
         res.status(403).send({
             msg: 'ERROR',
-            error: 'Cannot pathc other users'
+            error: 'Cannot patch other users'
         })
     }
     try {

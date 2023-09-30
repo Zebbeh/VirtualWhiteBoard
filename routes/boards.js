@@ -31,7 +31,7 @@ router.get('/:id', async (req,res) => {
     }
     
 })
-
+// TODO needs to take a closer look at!
 router.post('/', async (req,res) => { 
     try{
         const board = await prisma.Board.create({
@@ -56,9 +56,6 @@ router.post('/', async (req,res) => {
     }finally {
         await prisma.$disconnect(); // Disconnect Prisma client
     }
-    
-
-
 });
 
 module.exports = router
