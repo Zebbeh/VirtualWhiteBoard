@@ -8,7 +8,11 @@
 
 
 ### GET user boards
-GET {{api-url}}/6515d740b578cff66fd14cd0
+GET {{api-url}}/user/6516d9e045a25c72f1ec3824
+Authorization: Bearer {{token}}
+
+### GET board with boardId
+GET {{api-url}}/6519c5198380c422bd05878e
 Authorization: Bearer {{token}}
 
 
@@ -18,7 +22,7 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "name": "Test2"
+    "name": "Test111"
 }
 
 

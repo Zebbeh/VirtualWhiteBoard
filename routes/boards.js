@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 
 
 // Get user boards
-router.get('/:id', async (req,res) => {
+router.get('/user/:id', async (req,res) => {
 
     try {
         const user = await prisma.User.findUnique({
@@ -31,6 +31,31 @@ router.get('/:id', async (req,res) => {
     }
     
 })
+router.get('/:id', async (req,res) => {
+    const userBoards = req.authUser.board
+    try {
+        const board = await prisma.Board.findUnique({
+            where: {id: req.params.id },
+        })
+        if (userBoards.includes(board.name)){
+            console.log("Get board")
+            res.send({
+                msg: 'board',
+                board: board.name,
+                createdAt: board.createdAt,
+                creator: board.userId
+            })
+        } else {
+            res.status(401).send({error: "Not allowed to see this board"})
+        }
+    } catch (error) {
+        console.error(error)
+    }
+})
+
+
+
+
 // TODO needs to take a closer look at!
 router.post('/', async (req,res) => { 
     try{

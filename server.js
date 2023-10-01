@@ -11,7 +11,7 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
     console.log(`GET request to / from ${req.ip}`)
-    res.send('Mainpage!')
+    res.send('Mainpage')
 })
 
 const usersRouter = require('./routes/users.js')
