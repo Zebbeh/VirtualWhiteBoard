@@ -78,7 +78,8 @@ router.patch('/:id', auth, async (req,res) => {
         },
         data: {
             password: hash,
-            name: req.params.name
+            name: req.params.name,
+            board: req.params.board
         }
     })
     res.send({

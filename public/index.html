@@ -12,22 +12,31 @@
     <h4>Endpoints</h4>
     <div class="list">
         <ul>
-            <li>users</li>
+            <li>USERS</li>
+            <br>
             <ul>
-                <li>GET User Information: GET </li>
-                 <li>Create User: POST </li>
-                  <li>User Login: POST </li> 
-                  <li>Update User: PATCH </li>
-                   <li>Delete User: DELETE </li>
+                <li>GET User Information: GET /</li>
+                 <li>Create User: POST / </li>
+                  <li>User Login: POST /login </li> 
+                  <li>Update User: PATCH /ID </li>
+                   <li>Delete User: DELETE /ID </li>
             </ul>
-            <li>posts
+            <br>
+            <li>POSTS</li>
+            <br>
                 <ul>
-                    <li> Post a New Post: POST </li>
-                     <li> Patch a Post: PATCH </li>
-                      <li> Delete a Post: DELETE </li>
+                    <li> Post a New Post: POST / </li>
+                     <li> Patch a Post: PATCH /ID </li>
+                      <li> Delete a Post: DELETE /ID </li>
                 </ul>
-            </li>
-            <li>boards</li>
+                <br>
+            <li>BOARDS</li>
+            <ul>
+                <li>GET boards the user has access to: GET /user/userId</li>
+                <li>GET board with id: GET /ID</li>
+                <li>Create a new board: POST /</li>
+                <li>NEED TO IMPLEMENT PATCH, TO GET THE NOTES THAT ARE POSTED</li>
+            </ul>
         </ul>
     </div>
 <br>
